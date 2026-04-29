@@ -1,0 +1,19 @@
+name: Basic Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-basic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show files
+        run: ls -la
+
+      - name: Print text file
+        run: cat *.txt
